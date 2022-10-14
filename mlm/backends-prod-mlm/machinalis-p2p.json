@@ -1,0 +1,18 @@
+{
+    "url": "/recommendations_items_p2p/api/v1.0/recommendations",
+    "available_params": [
+          "limit",
+          "client",
+          "item_ids",
+          "min_recomms"
+    ],
+    "required_params": [
+          "purchased_category",
+          "site_id",
+          "item_id"
+    ],
+    "headers": {},
+    "param_conversions": null,
+    "low_level_backend_type": null,
+    "backend_config": null
+}

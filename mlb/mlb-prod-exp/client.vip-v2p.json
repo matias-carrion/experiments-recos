@@ -1,0 +1,208 @@
+{
+      "key": "vip-v2p",
+      "value": {
+            "promotion_decorator_enable": true,
+            "extra_config": {
+                  "filters": {
+                        "removes": [],
+                        "adds": [
+                              "supermarket_item_related"
+                        ]
+                  }
+            },
+            "title": "Quienes vieron este producto también compraron",
+            "backend_config": {
+                  "mco": "machinalis-v2p",
+                  "_mla": "machinalis-v2p-pdp-boost-v2",
+                  "_mlm": "machinalis-v2p-pdp-boost-v2",
+                  "mlc": "machinalis-v2p",
+                  "mlv": "machinalis-v2p",
+                  "mlu": "machinalis-v2p",
+                  "_mlb": "machinalis-v2p-pdp-boost-v2",
+                  "mpe": "machinalis-v2p",
+                  "mec": "machinalis-v2p"
+            },
+            "enable_add_to_cart": {
+                  "mlm": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mla": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mlb": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mco": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mlc": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  }
+            },
+            "availables_sites": [
+                  "MLB",
+                  "MLA",
+                  "MLM",
+                  "MLU",
+                  "MLV",
+                  "MLC",
+                  "MCO",
+                  "MPE",
+                  "MEC"
+            ],
+            "routings": {
+                  "mlm": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 2,
+                              "backend_id": "triggered_item_supermarket_recommendations"
+                        },
+                        "pdp_off": {
+                              "backend_type": "low_level",
+                              "priority": 3,
+                              "has_pdp_support": [
+                                    "false"
+                              ],
+                              "backend_id": "machinalis-v2p-full"
+                        },
+                        "shops": {
+                              "priority": 1,
+                              "site_platforms": [
+                                    "MS"
+                              ],
+                              "backend_id": "empty"
+                        },
+                        "fashion": {
+                              "priority": 4,
+                              "categories": [
+                                    "MLM1430"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "unika-items",
+                                    "run_on_client": false
+                              }
+                        }
+                  },
+                  "mla": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 2,
+                              "backend_id": "triggered_item_supermarket_recommendations"
+                        },
+                        "pdp_off": {
+                              "backend_type": "low_level",
+                              "priority": 1,
+                              "has_pdp_support": [
+                                    "false"
+                              ],
+                              "backend_id": "machinalis-v2p"
+                        },
+                        "fashion": {
+                              "priority": 4,
+                              "categories": [
+                                    "MLA1430"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "unika-items",
+                                    "run_on_client": false
+                              }
+                        },
+                        "ranker": {
+                              "priority": 1,
+                              "categories": [
+                                    "MLA1168",
+                                    "MLA1403",
+                                    "MLA1648"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "aml-v2p-lightgbm",
+                                    "run_on_client": false
+                              }
+                        }
+                  },
+                  "mlb": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 2,
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "item-supermarket-geo",
+                                    "run_on_client": false
+                              }
+                        },
+                        "pdp_off": {
+                              "backend_type": "low_level",
+                              "priority": 1,
+                              "has_pdp_support": [
+                                    "false"
+                              ],
+                              "backend_id": "machinalis-v2p"
+                        },
+                        "fashion": {
+                              "priority": 3,
+                              "categories": [
+                                    "MLB1430"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "unika-items",
+                                    "run_on_client": false
+                              }
+                        },
+                        "sea": {
+                              "priority": 5,
+                              "cart_logistic_types": [
+                                    "fulfillment"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "p2p-sea-v2-threshold",
+                                    "run_on_client": false
+                              }
+                        }
+                  },
+                  "mco": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 2,
+                              "backend_id": "triggered_item_supermarket_recommendations"
+                        }
+                  },
+                  "mlc": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 2,
+                              "backend_id": "triggered_item_supermarket_recommendations"
+                        }
+                  }
+            },
+            "preferred_seed": "session",
+            "base_experiment": "univb-items",
+            "carousel_component": {
+                  "carousel_type": "DEFAULT",
+                  "min_recomms": 6
+            }
+      }
+}

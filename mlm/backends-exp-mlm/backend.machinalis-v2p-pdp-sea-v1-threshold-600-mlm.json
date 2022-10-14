@@ -1,0 +1,22 @@
+{
+    "url": "/machinalis/recommendations/api/v1.0/pdp",
+    "available_params": [
+          "limit",
+          "client",
+          "user_id",
+          "min_recomms"
+    ],
+    "required_params": [
+          "item_id",
+          "purchased_category",
+          "site_id"
+    ],
+    "headers": {},
+    "param_conversions": {},
+    "low_level_backend_type": null,
+    "backend_config": {
+          "pdp_boosting_v2": "true",
+          "enable_sea_v1": "true",
+          "price_threshold": 600
+    }
+}

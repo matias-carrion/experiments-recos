@@ -1,0 +1,186 @@
+{
+      "key": "vip",
+      "value": {
+            "extra_config": {
+                  "filters": {
+                        "removes": [],
+                        "adds": [
+                              "supermarket_item_related"
+                        ]
+                  }
+            },
+            "title": "Quienes compraron este producto también compraron",
+            "backend_config": {
+                  "mco": "machinalis-p2p",
+                  "mlm": "machinalis-p2p",
+                  "mec": "machinalis-p2p",
+                  "mlc": "machinalis-p2p",
+                  "mlv": "machinalis-p2p",
+                  "mlu": "machinalis-p2p",
+                  "mla": "machinalis-attributes-p2p",
+                  "mlb": "machinalis-p2p"
+            },
+            "enable_add_to_cart": {
+                  "mlm": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mla": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mlb": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mlc": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  },
+                  "mco": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1
+                        }
+                  }
+            },
+            "availables_sites": [
+                  "MLB",
+                  "MLA",
+                  "MLM",
+                  "MCO",
+                  "MLV",
+                  "MLC",
+                  "MEC",
+                  "MLU"
+            ],
+            "routings": {
+                  "mco": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 1,
+                              "backend_id": "triggered_item_p2p_supermarket_recommendations"
+                        },
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 1,
+                              "categories": [
+                                    "MCO1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        }
+                  },
+                  "mlm": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 1,
+                              "backend_id": "triggered_item_p2p_supermarket_recommendations"
+                        },
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 2,
+                              "categories": [
+                                    "MLM1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        },
+                        "sea": {
+                              "priority": 5,
+                              "cart_logistic_types": [
+                                    "fulfillment"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "vip-sea-v2-threshold",
+                                    "run_on_client": false,
+                                    "track_empty_recommendation": true
+                              }
+                        }
+                  },
+                  "mlc": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 1,
+                              "backend_id": "triggered_item_p2p_supermarket_recommendations"
+                        },
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 1,
+                              "categories": [
+                                    "MLC1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        }
+                  },
+                  "mlu": {
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 1,
+                              "categories": [
+                                    "MLU1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        }
+                  },
+                  "mla": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "backend_type": "function",
+                              "priority": 1,
+                              "backend_id": "triggered_item_p2p_supermarket_recommendations"
+                        },
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 2,
+                              "categories": [
+                                    "MLA1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        }
+                  },
+                  "mlb": {
+                        "supermarket": {
+                              "tags": "supermarket_eligible",
+                              "priority": 1,
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "item-p2p-supermarket-geo",
+                                    "run_on_client": false
+                              }
+                        },
+                        "fashion": {
+                              "title": "Mira estos productos similares",
+                              "priority": 2,
+                              "categories": [
+                                    "MLB1430"
+                              ],
+                              "backend_id": "tagging-searchsimilar"
+                        },
+                        "sea": {
+                              "priority": 5,
+                              "cart_logistic_types": [
+                                    "fulfillment"
+                              ],
+                              "experiment_config": {
+                                    "global": false,
+                                    "experiment_name": "vip-sea-v2-threshold",
+                                    "run_on_client": false,
+                                    "track_empty_recommendation": true
+                              }
+                        }
+                  }
+            },
+            "preferred_seed": "session"
+      }
+}
